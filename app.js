@@ -38,7 +38,13 @@ function handleClicNumber(event) {
 }
 function handleClicOpreator(event) {
   console.log("clicked on Opreator");
-  if (number1 && !number2 && !opreator) {
+  if (event.target.textContent === "C") {
+    number1 = null;
+    number2 = null;
+    opreator = null;
+    result = null;
+    displayElemt.textContent = 0;
+  } else if (number1 && !number2 && !opreator) {
     opreator = event.target.textContent;
   }
 
